@@ -1,0 +1,18 @@
+class ex
+{
+	public static void main(String [] args)throws Exception
+	{
+		URL u = new URL("https://kainjan1.files.wordpress.com/2017/01/packages-in-java.pdf");
+		InputStream is = u.openStream();
+		FileOutputStream os = new FileOutputStream("E://God.pdf");
+		byte[] b = new byte[20148];
+		int length;
+		while((length=is.read())!=-1)
+		{
+			os.write(b,0,length);
+		}
+		is.close();
+		os.close();
+		
+	}
+}
